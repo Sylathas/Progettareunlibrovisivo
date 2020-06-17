@@ -2,8 +2,6 @@ var camera, scene, renderer, mesh, material, cameraControls, cube;
 init();
 animate();
 
-import { OBJLoader } from "../js/OBJLoader.js";
-
 //Check if mouse is down (to stop model from rotating when orbiting)
 var mouseDown = 0;
 document.body.onmousedown = function() {
