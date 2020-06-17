@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Conversazione in Sicilia</title>
+    <meta name="description" content="Progettare un libro visivo: Conversazione in Sicilia">
+    <meta name="author" content="Niccolò Abate">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/OrbitControls.js"></script>
+  </head>
+  <body>
+
+    <!--Preload Divs -->
+    <div id="start">
+      <div class="percentage" id="percent"></div>
+      <div id="tutorial">
+        <img id="leftarrowkey" src="Images/Tutorial.png">
+        <img id="rightarrowkey" src="Images/Tutorial.png">
+        <p id="instructions"> Usa le frecce per navigare</p>
+        <p>
+      </div>
+    </div>
+
+    <!--Grid Divs -->
+    <div id="Grids1">
+      <div class="grid" id="grid1"></div>
+      <div class="grid" id="grid2"></div>
+      <div class="grid" id="grid3"></div>
+      <div class="grid" id="grid4"></div>
+      <div class="grid" id="grid5"></div>
+      <div class="grid" id="grid6"></div>
+      <div class="grid" id="grid7"></div>
+      <div class="grid" id="grid8"></div>
+      <div class="grid" id="grid9"></div>
+    </div>
+    <div id="Grids2">
+      <div class="grid" id="grid10"></div>
+      <div class="grid" id="grid11"></div>
+      <div class="grid" id="grid12"></div>
+      <div class="grid" id="grid13"></div>
+      <div class="grid" id="grid14"></div>
+      <div class="grid" id="grid15"></div>
+      <div class="grid" id="grid16"></div>
+      <div class="grid" id="grid17"></div>
+      <div class="grid" id="grid18"></div>
+    </div>
+    <div id="Grids3">
+      <div class="grid" id="grid19"></div>
+      <div class="grid" id="grid20"></div>
+      <div class="grid" id="grid21"></div>
+      <div class="grid" id="grid22"></div>
+      <div class="grid" id="grid23"></div>
+      <div class="grid" id="grid24"></div>
+      <div class="grid" id="grid25"></div>
+      <div class="grid" id="grid26"></div>
+      <div class="grid" id="grid27"></div>
+    </div>
+
+    <!--Navigation Divs -->
+    <div id="div1">
+      <p class="Titolo">Progettare un libro visivo:</br><span  class="Titolo_big">Conversazione in Sicilia</span></p>
+      <p class="Autore">Tesi di Niccolò Abate</p>
+    </div>
+    <div id="div2">
+      <div id="Edizione53">
+        <div id="canvas53"></div>
+        <p>Elio Vittorini, edizione illustrata di <span class="nome">Conversazione in Sicilia</span>, 1953.</p>
+      </div>
+    </div>
+    <div id="div3">
+      <div class="Vertical">
+        <img id="Politecnico" src="Images/Politecnico.jpg">
+        <p>Elio Vittorini e Albe Steiner,<br>Prima pagina de <span class="nome"> Il Politecnico </span>, 1943.</p>
+      </div>
+      <div class="Horizontal">
+        <img id="Americana" src="Images/Americana.png">
+        <p>Elio Vittorini, Doppia pagina di Americana, 2015.</p>
+      </div>
+    </div>
+    <div id="div4">
+      <p class="Titolo_big">Onoricità</p>
+      <p id="citazione1" class="Citazioni">“La collana perenne delle iterazioni anaforiche, la tenacia delle simmetrie sintattiche,
+         l’ipnosi dichiarata di un lessico cadenzante, […], riflettono, anche nel minimo dettaglio, nel più esiguo
+         campione, l’ideologia itinerale che sostiene il romanzo, e che non si confessa semplicemente nelle ovvie
+         equazioni dell’intreccio, esperienza come conversazione […] è anzi ideologia che si invoca a organizzare il reale”</p>
+         <p id="autorecitazione1" class="autorecitazione"> E. Sanguineti, Introduzione a
+         <span class="nome"> Conversazione in Sicilia </span>, Torino, Einaudi, 1966.</p>
+    </div>
+    <div id="div5">
+      <p class="Titolo_big">Progressione</p>
+      <p id="citazione2" class="Citazioni">“Vi è di più: il giuoco metamerico delle repliche, per un deliberato
+        depauperarsi delle forme irrigidite, risolve circolarmente la progressione-regressione, costringe
+        ogni movimento a ricadere sopra se stesso.”</p>
+        <p id="autorecitazione2" class="autorecitazione"> E. Sanguineti, Introduzione a
+        <span class="nome"> Conversazione in Sicilia </span>, Torino, Einaudi, 1966.</p>
+    </div>
+    <div id="div6">
+      <p class="Titolo_big">Censura</p>
+      <p id="citazione3" class="Citazioni">“Del resto, sempre in pittura, importa piuttosto suggerire un motivo, che specificarlo.
+        Riuscire a suggerire che qualcosa è accaduto o sta per accadere, che un carretto sta per passare,
+        che una draga poco più giù macina l’acqua”</p>
+      <p id="autorecitazione3" class="autorecitazione"> Elio Vittorini, <span class="nome"> Il Bargello </span>,
+         20 novembre 1932.</p>
+    </div>
+    <div id="div7"></div>
+    <div id="div8"></div>
+    <div id="div9"></div>
+    <div id="div10"></div>
+    <div id="div11">
+      <div id="Pages">
+        <div id="canvaspages"></div>
+        <p>Mia riedizione di <span class="nome">Conversazione in Sicilia</span> priva della copertina.</p>
+      </div>
+    </div>
+    <div id="div12"></div>
+    <div id="div13"></div>
+    <div id="div14">
+      <div id="Book">
+        <div id="canvasbook"></div>
+        <p>Mia riedizione di <span class="nome">Conversazione in Sicilia</span>.</p>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script type="module" src="js/scene1.js"></script>
+    <script type="module" src="js/scene2.js"></script>
+    <script type="module" src="js/scene3.js"></script>
+  </body>
+</html>

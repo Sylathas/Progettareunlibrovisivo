@@ -1,0 +1,373 @@
+@font-face {
+  font-family: GaramondPro;
+  src: url(fonts/GaramondPro.otf);
+}
+
+@font-face {
+  font-family: GaramondProItalic;
+  src: url(fonts/GaramondPro_it.otf);
+}
+
+body{
+  background-color: black;
+  overflow: hidden;
+  font-family: GaramondProItalic;
+  color: white;
+  font-size: 2vh;
+}
+
+.nome{
+  font-family: GaramondPro;
+}
+
+/*Spinner and Tutorial style*/
+
+.percentage {
+  z-index: 100;
+  text-align:center;
+  font-size : 3vh;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+}
+
+#tutorial{
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  width: 20vw;
+  height: 15vw;
+  opacity: 0;
+  transition: 1s;
+}
+
+#leftarrowkey{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10vw;
+}
+
+#rightarrowkey{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10vw;
+  transform: scaleX(-1);
+}
+
+#instructions{
+  position: absolute;
+  bottom:0;
+  font-size: 3vh;
+}
+
+/*Images Styles*/
+
+.Horizontal{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 40vh;
+}
+
+.Vertical{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  height: 80vh;
+}
+
+
+/*Grids Divs Style*/
+
+#Grids1{
+  position: absolute;
+  top:0;
+  left:50vw;
+  transform: translate(-50%,0);
+  width:100vw;
+  height:100vh;
+  transition: 1s;
+}
+
+#Grids2{
+  position: absolute;
+  top:0;
+  left:150vw;
+  transform: translate(-50%,0);
+  width:100vw;
+  height:100vh;
+  transition: 1s;
+}
+
+#Grids3{
+  position: absolute;
+  top:0;
+  left:-50vw;
+  transform: translate(-50%,0);
+  width:100vw;
+  height:100vh;
+  transition: 1s;
+}
+
+.grid{
+  position:absolute;
+  border-left: 1px solid #262626;
+  top:0;
+  height: 100vh;
+}
+
+#grid1, #grid10, #grid19{
+  left: 10vw;
+}
+
+#grid2, #grid11, #grid20{
+  left: 20vw;
+}
+
+#grid3, #grid12, #grid21{
+  left: 30vw;
+}
+
+#grid4, #grid13, #grid22{
+  left: 40vw;
+}
+
+#grid5, #grid14, #grid23{
+  left: 50vw;
+}
+
+#grid6, #grid15, #grid24{
+  left: 60vw;
+}
+
+#grid7, #grid16, #grid25{
+  left: 70vw;
+}
+
+#grid8, #grid17, #grid26{
+  left: 80vw;
+}
+
+#grid9, #grid18, #grid27{
+  left: 90vw;
+}
+
+/*Navigation Divs Style*/
+
+#div1{
+  position: absolute;
+  top:50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+  opacity: 0;
+}
+
+#div2{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+#div3{
+  position: absolute;
+  top:-50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+#div4{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+#div5{
+  position: absolute;
+  top:150vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+#div6{
+  position: absolute;
+  top:150vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+#div7{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: blue;
+  transition: 1s;
+}
+
+#div8{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: red;
+  transition: 1s;
+}
+
+#div9{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: green;
+  transition: 1s;
+}
+
+#div10{
+  position: absolute;
+  top:-50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: blue;
+  transition: 1s;
+}
+
+#div11{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+#div12{
+  position: absolute;
+  top:-50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: green;
+  transition: 1s;
+}
+
+#div13{
+  position: absolute;
+  top:-50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: blue;
+  transition: 1s;
+}
+
+#div14{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+/*Div 1 Style*/
+
+.Titolo{
+  font-family: GaramondProItalic;
+  font-size: 5vh;
+}
+
+.Titolo_big{
+  font-size: 10vh;
+  font-family: GaramondPro;
+}
+
+.Autore{
+  position: absolute;
+  bottom:0;
+  font-size: 3vh;
+}
+
+/*Div 2,11,14 Style*/
+
+#Edizione53, #Pages, #Book{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform: translate(-20vw, 0);
+  width:40vw;
+  height:100%;
+}
+
+#canvas53, #canvaspages, #canvasbook{
+  width:40vw;
+  height: 70vh;
+}
+
+/*Div 3 Style*/
+
+#Politecnico{
+  width: 30vw;
+}
+
+#Americana{
+  width: 40vw;
+}
+
+/*Div 4-5-6 Style*/
+
+.Citazioni{
+  margin-top: -15vh;
+  font-size: 4vh;
+}
+
+.autorecitazione{
+  margin-top: 3vh;
+  font-size: 3vh;
+  opacity:0;
+  transition: 0.5s;
+  color:  #cccccc;
+}
+
+#citazione1, #citazione2, #citazione3{
+  opacity: 0;
+  line-height: 0.8;
+  transition: 0.8s;
+}
