@@ -1,11 +1,11 @@
 @font-face {
   font-family: GaramondPro;
-  src: url(fonts/GaramondPro.otf);
+  src: url(Fonts/GaramondPro.otf);
 }
 
 @font-face {
   font-family: GaramondProItalic;
-  src: url(fonts/GaramondPro_it.otf);
+  src: url(Fonts/GaramondPro_it.otf);
 }
 
 body{
