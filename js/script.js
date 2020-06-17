@@ -32,7 +32,7 @@ function animateValue(id, start, end, duration) {
 }
 
 // Fading Out Loadbar on Finised
-setTimeout(function(){
+window.onload = function(){
   $('.percentage').fadeOut(300);
   setTimeout(function(){
     $('#tutorial').css({ opacity: "1" });
@@ -42,7 +42,7 @@ setTimeout(function(){
       interactable = true;
     }, 2500);
   }, 750);
-}, time);
+}
 
 $(document).keydown(function(e){
 
@@ -112,11 +112,17 @@ $(document).keydown(function(e){
       } else if(slide == 8){
         $("#div8, #Grids1").css({ left:'-50vw'});
         $("#div9, #Grids2").css({ left:'50vw'});
+        setTimeout(function(){$("#question").css({ opacity: "1"});},750);
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       } else if(slide == 9){
         $("#div9").css({ top:'150vh'});
         $("#div10").css({ top:'50vh'});
+        setTimeout(function(){
+          $("#question").css({ opacity:'0'});
+          $(".papercaption, .Paper").css({ opacity:'1'});
+          $(".Paper").css({ filter:'blur(0)'});
+        }, 750);
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       } else if(slide == 10){
@@ -195,7 +201,7 @@ $(document).keydown(function(e){
          $("#div6").css({ top:'150vh'});
          setTimeout(function(){
            $("#citazione3").css({ opacity: "0", "line-height": "0.6", "margin-top": "-15vh"});
-           $("#autorecitazione2").css({ opacity: "0"});
+           $("#autorecitazione3").css({ opacity: "0"});
            $("#citazione2").css({ opacity: "1", "line-height": "1.2", "margin-top": "-5vh"});
            setTimeout(function(){$("#autorecitazione2").css({ opacity: "1"});}, 700);
          }, 750);
@@ -223,6 +229,9 @@ $(document).keydown(function(e){
        } else if(slide == 10){
          $("#div9").css({ top:'50vh'});
          $("#div10").css({ top:'-50vh'});
+         $("#question").css({ opacity:'1'});
+         $(".Paper").css({ opacity:'0.5', filter:'blur(10px)'});
+         $(".papercaption").css({ opacity:'0'});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 11){

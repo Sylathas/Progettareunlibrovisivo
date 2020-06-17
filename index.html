@@ -11,16 +11,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/OrbitControls.js"></script>
   </head>
-  <body onload="Loaded()">
+  <body>
 
     <!--Preload Divs -->
     <div id="start">
       <div class="percentage" id="percent"></div>
       <div id="tutorial">
-        <img id="leftarrowkey" src="Images/Tutorial.png">
-        <img id="rightarrowkey" src="Images/Tutorial.png">
-        <p id="instructions"> Usa le frecce per navigare</p>
-        <p>
+        <div id="leftTutorial">
+          <img id="leftarrowkey" src="Images/Tutorial.png">
+          <img id="rightarrowkey" src="Images/Tutorial.png">
+          <p id="instructions">Usa le frecce della tastiera</br> per navigare</p>
+        </div>
+        <div id="rightTutorial">
+          <img id="mouse" src="Images/pointer.png">
+          <p id="instructions">Clicca e trascina</br> sui modelli per ruotarli</p>
+        </div>
       </div>
     </div>
 
@@ -77,11 +82,11 @@
       </div>
       <div class="Horizontal">
         <img id="Americana" src="Images/Americana.png">
-        <p>Elio Vittorini, Doppia pagina di Americana, 2015.</p>
+        <p>Elio Vittorini, doppia pagina di <span class="nome">Americana</span>, 2015.</p>
       </div>
     </div>
     <div id="div4">
-      <p class="Titolo_big">Onoricità</p>
+      <p class="Titolo_big">Oniricità</p>
       <p id="citazione1" class="Citazioni">“La collana perenne delle iterazioni anaforiche, la tenacia delle simmetrie sintattiche,
          l’ipnosi dichiarata di un lessico cadenzante, […], riflettono, anche nel minimo dettaglio, nel più esiguo
          campione, l’ideologia itinerale che sostiene il romanzo, e che non si confessa semplicemente nelle ovvie
@@ -107,8 +112,29 @@
     </div>
     <div id="div7"></div>
     <div id="div8"></div>
-    <div id="div9"></div>
-    <div id="div10"></div>
+    <div id="div9">
+      <div class="HorizontalVerySmall left">
+        <img class="Paper" src="Images/Paper1.png">
+        <p class="papercaption">Mohawk Superfine Eggshell 120g</p>
+      </div>
+      <div class="HorizontalVerySmall center">
+        <img class="Paper" src="Images/Paper2.png"><p id="question">?</p></img>
+        <p class="papercaption">Takeo Yamabiko Hosho 78g</p>
+      </div>
+      <div class="HorizontalVerySmall right">
+        <img class="Paper" src="Images/Paper3.png">
+        <p class="papercaption">Reflex Sixties 60g</p>
+      </div>
+    </div>
+    <div id="div10">
+      <div class="HorizontalSmall left">
+        <img class="BookManifest" src="Images/Bookmanifest1.jpg">
+        <p>Irma Boom, doppie pagine di <span class="name">Book Manifest</span>, 2015.</p>
+      </div>
+      <div class="HorizontalSmall right">
+        <img class="BookManifest" src="Images/Bookmanifest2.jpg">
+      </div>
+    </div>
     <div id="div11">
       <div id="Pages">
         <div id="canvaspages"></div>

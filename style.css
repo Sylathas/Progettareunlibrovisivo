@@ -13,7 +13,11 @@ body{
   overflow: hidden;
   font-family: GaramondProItalic;
   color: white;
-  font-size: 2vh;
+  font-size: 2.5vh;
+}
+
+canvas:hover{
+  cursor: move;
 }
 
 .nome{
@@ -34,13 +38,30 @@ body{
 
 #tutorial{
   position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%,-50%);
-  width: 20vw;
-  height: 15vw;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   transition: 1s;
+}
+
+#leftTutorial{
+  position: absolute;
+  left: 20vw;
+  top: 50vh;
+  transform: translate(0,-50%);
+  width: 20vw;
+  height: 33vh;
+}
+
+#rightTutorial{
+  position: absolute;
+  right: 20vw;
+  top: 50vh;
+  transform: translate(0,-50%);
+  width: 20vw;
+  height: 33vh;
 }
 
 #leftarrowkey{
@@ -48,6 +69,7 @@ body{
   left: 0;
   top: 0;
   width: 10vw;
+  z-index: 10;
 }
 
 #rightarrowkey{
@@ -56,6 +78,15 @@ body{
   top: 0;
   width: 10vw;
   transform: scaleX(-1);
+  z-index: 10;
+}
+
+#mouse{
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 5vw;
+  z-index: 10;
 }
 
 #instructions{
@@ -63,25 +94,6 @@ body{
   bottom:0;
   font-size: 3vh;
 }
-
-/*Images Styles*/
-
-.Horizontal{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40vw;
-  height: 40vh;
-}
-
-.Vertical{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30vw;
-  height: 80vh;
-}
-
 
 /*Grids Divs Style*/
 
@@ -250,7 +262,6 @@ body{
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
-  background-color: green;
   transition: 1s;
 }
 
@@ -261,7 +272,6 @@ body{
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
-  background-color: blue;
   transition: 1s;
 }
 
@@ -351,7 +361,23 @@ body{
   width: 40vw;
 }
 
-/*Div 4-5-6 Style*/
+.Horizontal{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 40vh;
+}
+
+.Vertical{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  height: 80vh;
+}
+
+/*Div 4,5,6 Style*/
 
 .Citazioni{
   margin-top: -15vh;
@@ -370,4 +396,61 @@ body{
   opacity: 0;
   line-height: 0.8;
   transition: 0.8s;
+}
+
+/*Div 9 Style*/
+
+.HorizontalVerySmall{
+  position: absolute;
+  top: 40vh;
+  transform: translate(0,-50%);
+  width: 20vw;
+  height: 30vh;
+}
+
+.center{
+  left: 30vw;
+}
+
+.Paper{
+  width: 20vw;
+  opacity: 0.5;
+  filter: blur(10px);
+}
+
+.papercaption{
+  opacity: 0;
+}
+
+#question{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 20vh;
+  margin: 0;
+  filter: blur(0);
+}
+
+/*Div 10 Style*/
+
+.HorizontalSmall{
+  position: absolute;
+  top: 0;
+  width: 30vw;
+  height: 40vh;
+}
+
+.right{
+  right: 0;
+}
+
+.left{
+  left: 0;
+}
+
+.BookManifest{
+  width: 30vw;
 }
