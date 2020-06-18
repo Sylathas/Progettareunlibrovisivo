@@ -57,7 +57,7 @@ function init() {
     }
 
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('./3D/Mybook.glb', (gltf) => {
+    gltfLoader.load('./3D/MyBook.glb', (gltf) => {
       mygltf = gltf.scene;
       scene.add(gltf.scene);
     });
