@@ -1,6 +1,8 @@
-var camera, scene, renderer, mesh, material, cameraControls, cube;
+var camera, scene, renderer, mesh, material, cameraControls, mygltf;
 init();
 animate();
+
+import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/GLTFLoader.js';
 
 //Check if mouse is down (to stop model from rotating when orbiting)
 var mouseDown = 0;
@@ -28,21 +30,38 @@ function init() {
 
     // Create camera.
     camera = new THREE.PerspectiveCamera(70, w / h, 1, 1000);
-
+    camera.position.set(8,10,15);
     //create controls
     cameraControls = new THREE.OrbitControls( camera, renderer.domElement );
-    cameraControls.enableKeys = false;
     cameraControls.enableZoom = false;
+    cameraControls.enableKeys = false;
     cameraControls.enablePan = false;
 
     // Create scene.
     scene = new THREE.Scene();
 
-    //add a cube
-    var geometry = new THREE.BoxGeometry();
-    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
+    {
+      const skyColor = 0xB1E1FF;  // light blue
+      const groundColor = 0xB97A20;  // brownish orange
+      const intensity = 1;
+      const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
+      scene.add(light);
+    }
+
+    {
+      const color = 0xFFFFFF;
+      const intensity = 1;
+      const light = new THREE.DirectionalLight(color, intensity);
+      light.position.set(5, 10, 2);
+      scene.add(light);
+      scene.add(light.target);
+    }
+
+    const gltfLoader = new GLTFLoader();
+    gltfLoader.load('../3D/coco.glb', (gltf) => {
+      mygltf = gltf.scene;
+      scene.add(gltf.scene);
+    });
 
     camera.position.z = 2;
 
@@ -51,9 +70,8 @@ function init() {
 
 function animate() {
     resizeCanvasToDisplaySize();
-
     if(mouseDown == 0){
-      cube.rotation.y += 0.01;
+      if (mygltf) mygltf.rotation.y += 0.01;
     }
 
     cameraControls.update();
