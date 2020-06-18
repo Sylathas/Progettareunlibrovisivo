@@ -20,6 +20,10 @@ canvas:hover{
   cursor: move;
 }
 
+a:visited{
+  color: white;
+}
+
 .nome{
   font-family: GaramondPro;
 }
@@ -339,6 +343,22 @@ canvas:hover{
   position: absolute;
   bottom:0;
   font-size: 3vh;
+}
+
+#arrow{
+  font-size: 10vh;
+  position: absolute;
+  right: 0;
+  top: 40vh;
+  transform: translate(0,-5vh);
+}
+
+#navigate{
+  font-size: 2.5vh;
+  position: absolute;
+  right: 0;
+  top: 40vh;
+  transform: translate(0,50%);
 }
 
 /*Div 2,11,14 Style*/

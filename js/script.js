@@ -44,6 +44,14 @@ window.onload = function(){
   }, 750);
 }
 
+$("#arrow").hover(
+  function(){
+    $("#navigate").text("Usa le frecce sulla tastiera per navigare.");
+  }, function(){
+    $("#navigate").text("");
+  }
+);
+
 $(document).keydown(function(e){
 
     //When right key is pressed:
