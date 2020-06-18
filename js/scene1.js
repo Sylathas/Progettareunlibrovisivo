@@ -29,11 +29,10 @@ function init() {
     container.appendChild(renderer.domElement);
 
     // Create camera.
-    camera = new THREE.PerspectiveCamera(70, w / h, 1, 1000);
-    camera.position.set(8,10,15);
+    camera = new THREE.PerspectiveCamera(1.5, w / h, 1, 1000);
+    camera.position.set(3,5,10);
     //create controls
     cameraControls = new THREE.OrbitControls( camera, renderer.domElement );
-    cameraControls.enableZoom = false;
     cameraControls.enableKeys = false;
     cameraControls.enablePan = false;
 
@@ -41,8 +40,8 @@ function init() {
     scene = new THREE.Scene();
 
     {
-      const skyColor = 0xB1E1FF;  // light blue
-      const groundColor = 0xB97A20;  // brownish orange
+      const skyColor = 0xFFFFFF;  // light blue
+      const groundColor = 0xFFFFFF;  // brownish orange
       const intensity = 1;
       const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
       scene.add(light);
@@ -52,18 +51,16 @@ function init() {
       const color = 0xFFFFFF;
       const intensity = 1;
       const light = new THREE.DirectionalLight(color, intensity);
-      light.position.set(5, 10, 2);
+      light.position.set(0, 0, 0);
       scene.add(light);
       scene.add(light.target);
     }
 
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('../3D/coco.glb', (gltf) => {
+    gltfLoader.load('./3D/Conversazione.glb', (gltf) => {
       mygltf = gltf.scene;
       scene.add(gltf.scene);
     });
-
-    camera.position.z = 2;
 
     cameraControls.update();
 }
@@ -71,7 +68,7 @@ function init() {
 function animate() {
     resizeCanvasToDisplaySize();
     if(mouseDown == 0){
-      if (mygltf) mygltf.rotation.y += 0.01;
+       if (mygltf) mygltf.rotation.y += 0.01;
     }
 
     cameraControls.update();

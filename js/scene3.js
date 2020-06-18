@@ -1,6 +1,8 @@
-var camera, scene, renderer, mesh, material, cameraControls, cube;
+var camera, scene, renderer, mesh, material, cameraControls, mygltf;
 init();
 animate();
+
+import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/GLTFLoader.js';
 
 //Check if mouse is down (to stop model from rotating when orbiting)
 var mouseDown = 0;
@@ -27,33 +29,46 @@ function init() {
     container.appendChild(renderer.domElement);
 
     // Create camera.
-    camera = new THREE.PerspectiveCamera(70, w / h, 1, 1000);
-
+    camera = new THREE.PerspectiveCamera(1.5, w / h, 1, 1000);
+    camera.position.set(5,5,10);
     //create controls
     cameraControls = new THREE.OrbitControls( camera, renderer.domElement );
     cameraControls.enableKeys = false;
-    cameraControls.enableZoom = false;
     cameraControls.enablePan = false;
 
     // Create scene.
     scene = new THREE.Scene();
 
-    //add a cube
-    var geometry = new THREE.BoxGeometry();
-    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
+    {
+      const skyColor = 0xFFFFFF;  // light blue
+      const groundColor = 0xFFFFFF;  // brownish orange
+      const intensity = 0.8;
+      const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
+      scene.add(light);
+    }
 
-    camera.position.z = 2;
+    {
+      const color = 0xFFFFFF;
+      const intensity = 1;
+      const light = new THREE.DirectionalLight(color, intensity);
+      light.position.set(5, 10, 2);
+      scene.add(light);
+      scene.add(light.target);
+    }
+
+    const gltfLoader = new GLTFLoader();
+    gltfLoader.load('./3D/Mybook.glb', (gltf) => {
+      mygltf = gltf.scene;
+      scene.add(gltf.scene);
+    });
 
     cameraControls.update();
 }
 
 function animate() {
     resizeCanvasToDisplaySize();
-
     if(mouseDown == 0){
-      cube.rotation.y += 0.01;
+      if (mygltf) mygltf.rotation.y += 0.01;
     }
 
     cameraControls.update();

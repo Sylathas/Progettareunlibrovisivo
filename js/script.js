@@ -240,44 +240,34 @@ $(document).keydown(function(e){
         setTimeout(function(){ animationfinished = true;}, 1000);
       } else if(slide == 20){
         $("#div9, #Grids1").css({ left:'-50vw'});
-        $("#div11, #Grids2").css({ left:'50vw'});
-        slide++;
-        setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 21){
-        $("#div11").css({ top:'150vh'});
-        $("#div12").css({ top:'50vh'});
+        $("#div12, #Grids2").css({ left:'50vw'});
         $("#pgimg4, #pgimg5, #pgimg6").css({ opacity:'1'});
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 22){
+      } else if(slide == 21){
         $("#pgimg1").css({ left:'0'});
         setTimeout(function(){
           $("#pgimg2, #pgimg3, #pgimg11").css({ "opacity":'1'});
         }, 1000);
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 23){
+      } else if(slide == 22){
         $("#div12").css({ top:'150vh'});
         $("#div13").css({ top:'50vh'});
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 24){
-        $("#div11").css({ top:'50vh'});
+      } else if(slide == 23){
+        $("#div14").css({ top:'50vh'});
         $("#div13").css({ top:'-50vh'});
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 25){
-        $("#div11, #Grids1").css({ left:'-50vw'});
-        $("#div14, #Grids2").css({ left:'50vw'});
-        slide++;
-        setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 26){
+      } else if(slide == 24){
         $("#div15").css({ top:'50vh'});
         $("#div14").css({ top:'150vh'});
         setTimeout(function(){$("#Book").css({opacity:"0"})}, 750);
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
-      } else if(slide == 27){
+      } else if(slide == 25){
         $("#div15").css({ top:'-50vh'});
         $("#div14").css({ top:'50vh'});
         slide++;
@@ -457,44 +447,34 @@ $(document).keydown(function(e){
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 21){
          $("#div9, #Grids3").css({ left:'50vw'});
-         $("#div11, #Grids1").css({ left:'150vw'});
-         slide--;
-         setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 22){
-         $("#div11").css({ top:'50vh'});
-         $("#div12").css({ top:'-50vh'});
+         $("#div12, #Grids1").css({ left:'150vw'});
          $("#pgimg4, #pgimg5, #pgimg6").css({ opacity:'0'});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 23){
+       } else if(slide == 22){
          $("#pgimg2, #pgimg3, #pgimg11").css({ "opacity":'0'});
          setTimeout(function(){
            $("#pgimg1").css({ left:'30vw'});
          }, 1000);
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 24){
+       } else if(slide == 23){
          $("#div12").css({ top:'50vh'});
          $("#div13").css({ top:'-50vh'});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 25){
-         $("#div11").css({ top:'150vh'});
+       } else if(slide == 24){
+         $("#div14").css({ top:'150vh'});
          $("#div13").css({ top:'50vh'});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 26){
-         $("#div11, #Grids3").css({ left:'50vw'});
-         $("#div14, #Grids1").css({ left:'150vw'});
-         slide--;
-         setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 27){
+       }  else if(slide == 25){
+         $("#Book").css({ opacity:'1'});
          $("#div14").css({ top:'50vh'});
          $("#div15").css({ top:'-50vh'});
-         setTimeout(function(){$("#Book").css({opacity:"1"})}, 750);
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
-       } else if(slide == 28){
+       } else if(slide == 26){
          $("#div14").css({ top:'150vh'});
          $("#div15").css({ top:'50vh'});
          slide--;
@@ -503,7 +483,7 @@ $(document).keydown(function(e){
     }
 
     //reset animationfinished if at beginning or end
-    if(slide == 28 || slide == 0){
+    if(slide == 26 || slide == 0){
       animationfinished = true;
     }
 
