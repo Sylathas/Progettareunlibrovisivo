@@ -39,7 +39,7 @@ window.onload = function(){
     setTimeout(function(){
       $('#tutorial').css({ opacity: "0" });
       setTimeout(function(){$('#div1').css({ opacity: "1" });}, 1000);
-      interactable = true;
+      setTimeout(function(){ interactable = true; }, 1500);
     }, 2500);
   }, 750);
 }
@@ -57,6 +57,10 @@ $(document).keydown(function(e){
       } else if(slide == 1){
         $("#div2").css({ top:'150vh'});
         $("#div3").css({ top:'50vh'});
+        setTimeout(function(){
+          $("#Edizione53").css({ left:'0', transform:"translate(0,0)"});
+          $(".Doppiapagina").css({ opacity:'1'});
+        }, 750);
         slide++;
         setTimeout(function(){ animationfinished = true; }, 1000);
       } else if(slide == 2){
@@ -239,9 +243,8 @@ $(document).keydown(function(e){
       } else if(slide == 22){
         $("#pgimg1").css({ left:'0'});
         setTimeout(function(){
-          $("#pgimg1").css({ "background-image":'url(Images/Gabbia11.png)'});
-          $("#pgimg2, #pgimg3").css({ "opacity":'1'});
-        }, 750);
+          $("#pgimg2, #pgimg3, #pgimg11").css({ "opacity":'1'});
+        }, 1000);
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       } else if(slide == 23){
@@ -257,6 +260,17 @@ $(document).keydown(function(e){
       } else if(slide == 25){
         $("#div11, #Grids1").css({ left:'-50vw'});
         $("#div14, #Grids2").css({ left:'50vw'});
+        slide++;
+        setTimeout(function(){ animationfinished = true;}, 1000);
+      } else if(slide == 26){
+        $("#div15").css({ top:'50vh'});
+        $("#div14").css({ top:'150vh'});
+        setTimeout(function(){$("#Book").css({opacity:"0"})}, 750);
+        slide++;
+        setTimeout(function(){ animationfinished = true;}, 1000);
+      } else if(slide == 27){
+        $("#div15").css({ top:'-50vh'});
+        $("#div14").css({ top:'50vh'});
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       }
@@ -444,11 +458,10 @@ $(document).keydown(function(e){
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 23){
-         $("#pgimg1").css({ "background-image":''});
-         $("#pgimg2, #pgimg3").css({ "opacity":'0'});
+         $("#pgimg2, #pgimg3, #pgimg11").css({ "opacity":'0'});
          setTimeout(function(){
-           $("#pgimg1").css({ left:'0'});
-         }, 750);
+           $("#pgimg1").css({ left:'30vw'});
+         }, 1000);
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 24){
@@ -466,11 +479,22 @@ $(document).keydown(function(e){
          $("#div14, #Grids1").css({ left:'150vw'});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
+       } else if(slide == 27){
+         $("#div14").css({ top:'50vh'});
+         $("#div15").css({ top:'-50vh'});
+         setTimeout(function(){$("#Book").css({opacity:"1"})}, 750);
+         slide--;
+         setTimeout(function(){ animationfinished = true;}, 1000);
+       } else if(slide == 28){
+         $("#div14").css({ top:'150vh'});
+         $("#div15").css({ top:'50vh'});
+         slide--;
+         setTimeout(function(){ animationfinished = true;}, 1000);
        }
     }
 
     //reset animationfinished if at beginning or end
-    if(slide == 26 || slide == 0){
+    if(slide == 28 || slide == 0){
       animationfinished = true;
     }
 

@@ -313,6 +313,16 @@ canvas:hover{
   transition: 1s;
 }
 
+#div15{
+  position: absolute;
+  top:-50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
 /*Div 1 Style*/
 
 .Titolo{
@@ -345,6 +355,10 @@ canvas:hover{
 #canvas53, #canvaspages, #canvasbook{
   width:40vw;
   height: 70vh;
+}
+
+.Doppiapagina{
+  opacity:0;
 }
 
 /*Div 3 Style*/
@@ -691,7 +705,7 @@ canvas:hover{
   left: 30vw;
 }
 
-#pgimg1 > .gabbia, #pgimg2 > .gabbia, #pgimg3 > .gabbia{
+#pgimg1 > .gabbia, #pgimg11 > .gabbia, #pgimg2 > .gabbia, #pgimg3 > .gabbia{
   background-image: url(Images/Gabbia1.png);
 }
 
@@ -702,6 +716,10 @@ canvas:hover{
 #pgimg1{
   opacity: 1;
   left: 30vw;
+}
+
+#pgimg11{
+  background-image: url(Images/Gabbia11.png);
 }
 
 #pgimg2{
