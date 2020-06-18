@@ -240,18 +240,16 @@ canvas:hover{
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
-  background-color: blue;
   transition: 1s;
 }
 
 #div8{
   position: absolute;
-  top:50vh;
-  left:150vw;
+  top:-50vh;
+  left:50vw;
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
-  background-color: red;
   transition: 1s;
 }
 
@@ -398,6 +396,199 @@ canvas:hover{
   transition: 0.8s;
 }
 
+/*Div 7 Style*/
+
+#a4container{
+  position: absolute;
+  left:0;
+  top:40vh;
+  transform: translate(0,-50%);
+  width: 21vw;
+  height: 32vw;
+  opacity: 0;
+  transition: 1s;
+}
+
+#a4{
+  margin:0;
+  width:100%;
+  height:29.7vw;
+  background-color: white;
+}
+
+#bookpapercontainer{
+  position: absolute;
+  left:40vw;
+  top:40vh;
+  transform: translate(-50%,-50%);
+  width: 17vw;
+  height: 26vw;
+  transition: 1s;
+}
+
+#bookpaper{
+  margin:0;
+  width:100%;
+  height: 24vw;
+  background-color: white;
+  transition: 1s;
+}
+
+#sizetext{
+  transition: 0.5s;
+}
+
+#a5container{
+  position: absolute;
+  left:60vw;
+  top:40vh;
+  transform: translate(0,-50%);
+  width: 14.85vw;
+  height: 23vw;
+  opacity: 0;
+  transition: 1s;
+}
+
+#a5{
+  margin:0;
+  width:100%;
+  height:21vw;
+  background-color: white;
+}
+
+.chapterdiv{
+  position: absolute;
+  top:40vh;
+  transform: translate(0, -50%);
+  width:8vw;
+  height:13vw;
+  opacity:0;
+  transition:1s;
+}
+
+.chapter{
+  margin:0;
+  width:100%;
+  height:11.3vw;
+  background-color: white;
+}
+
+.chaptertext{
+  opacity:0;
+}
+
+#chapter2div{
+  left:20vw;
+}
+
+#chapter3div{
+  left:30vw;
+}
+
+#chapter4div{
+  position: absolute;
+  top:40vh;
+  transform: translate(0, -50%);
+  width:8vw;
+  height:13vw;
+  opacity:0;
+  transition:1s;
+  left:40vw;
+}
+
+#chapter5div{
+  position: absolute;
+  top:40vh;
+  transform: translate(0, -50%);
+  width:8vw;
+  height:13vw;
+  opacity:0;
+  transition:1s;
+  left:50vw;
+}
+
+#chapter6div{
+  left:60vw;
+}
+
+#griglia1{
+  position: absolute;
+  border: 1px solid black;
+  opacity: 0;
+  top:2.4vw;
+  left:50%;
+  transform: translate(-50%,0);
+  height:22.7vw;
+  width:14vw;
+  transition: 1s;
+  z-index: 5;
+}
+
+#griglia4{
+  position: absolute;
+  border: 1px solid black;
+  opacity: 0;
+  top:1.5vw;
+  left:50%;
+  transform: translate(-50%,0);
+  height:24.4vw;
+  width:15.8vw;
+  transition: 1s;
+  z-index: 5;
+}
+
+#griglia5{
+  position: absolute;
+  border: 1px solid black;
+  opacity: 0;
+  top:1.2vw;
+  left:50%;
+  transform: translate(-50%,0);
+  height:25vw;
+  width:16.35vw;
+  transition: 1s;
+  z-index: 5;
+}
+
+#grigliaimmagine1{
+  position: absolute;
+  opacity: 0;
+  top:2.4vw;
+  left:50%;
+  transform: translate(-50%,0);
+  height:22.7vw;
+  width:14vw;
+  transition: 1s;
+  background-image: url(./Images/Griglia1.png);
+  background-size:cover;
+}
+
+#grigliaimmagine4{
+  position: absolute;
+  opacity: 0;
+  top:1.5vw;
+  left:50%;
+  transform: translate(-50%,0);
+  height:24.4vw;
+  width:15.8vw;
+  transition: 1s;
+  background-image: url(./Images/Griglia2.png);
+  background-size:cover;
+}
+
+#grigliaimmagine5{
+  position: absolute;
+  opacity: 0;
+  top:1.2vw;
+  left:50%;
+  transform: translate(-50%,0);
+  height:25vw;
+  width:16.35vw;
+  transition: 1s;
+  background-image: url(./Images/Griglia3.png);
+  background-size:cover;
+}
+
 /*Div 9 Style*/
 
 .HorizontalVerySmall{
@@ -406,6 +597,7 @@ canvas:hover{
   transform: translate(0,-50%);
   width: 20vw;
   height: 30vh;
+  transition: 1s;
 }
 
 .center{
@@ -413,13 +605,14 @@ canvas:hover{
 }
 
 .Paper{
-  width: 20vw;
+  width: 100%;
   opacity: 0.5;
   filter: blur(10px);
 }
 
 .papercaption{
   opacity: 0;
+  transition: 1s;
 }
 
 #question{
