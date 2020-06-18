@@ -290,7 +290,6 @@ canvas:hover{
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
-  background-color: green;
   transition: 1s;
 }
 
@@ -301,7 +300,6 @@ canvas:hover{
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
-  background-color: blue;
   transition: 1s;
 }
 
@@ -646,4 +644,82 @@ canvas:hover{
 
 .BookManifest{
   width: 30vw;
+}
+
+/*Div 10,11 Style*/
+
+.pgimg{
+  position: absolute;
+  top: 40vh;
+  transform: translate(0,-50%);
+  width: 20vw;
+  height: 28.2vw;
+  background-color: white;
+  transition: 1s;
+  opacity: 0;
+  background-size: cover;
+}
+
+.gabbia{
+  position: absolute;
+  opacity: 1;
+  top:2.4vw;
+  left:50%;
+  transform: translate(-50%,0);
+  width:14.1vw;
+  height:22.7vw;
+  transition: 1s;
+  z-index: 10;
+  background-size: cover;
+}
+
+.gabbia5{
+  position: absolute;
+  opacity: 1;
+  top:1.2vw;
+  left:50%;
+  transform: translate(-50%,0);
+  width:16.8vw;
+  height:25vw;
+  transition: 1s;
+  z-index: 10;
+  background-size: cover;
+}
+
+#pgimg1{
+  opacity: 1;
+  left: 30vw;
+}
+
+#pgimg1 > .gabbia, #pgimg2 > .gabbia, #pgimg3 > .gabbia{
+  background-image: url(Images/Gabbia1.png);
+}
+
+#pgimg4 > .gabbia5, #pgimg5 > .gabbia5, #pgimg6 > .gabbia5{
+  background-image: url(Images/Gabbia2.png);
+}
+
+#pgimg1{
+  opacity: 1;
+  left: 30vw;
+}
+
+#pgimg2{
+  background-image: url(Images/Gabbia12.png);
+}
+
+#pgimg3{
+  background-image: url(Images/Gabbia13.png);
+}
+
+#pgimg4{
+  background-image: url(Images/Gabbia21.png);
+}
+
+#pgimg5{
+  background-image: url(Images/Gabbia22.png);
+}
+
+#pgimg6{
+  background-image: url(Images/Gabbia23.png);
 }
