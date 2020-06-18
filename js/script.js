@@ -64,7 +64,7 @@ $(document).keydown(function(e){
         setTimeout(function(){ animationfinished = true; }, 1000);
       } else if(slide == 1){
         $("#div2").css({ top:'150vh'});
-        $("#div3").css({ top:'50vh'});
+        $("#div3").css({ top:'50vh', opacity: "1"});
         setTimeout(function(){
           $("#Edizione53").css({ left:'0', transform:"translate(0,0)"});
           $(".Doppiapagina").css({ opacity:'1'});
@@ -74,6 +74,7 @@ $(document).keydown(function(e){
       } else if(slide == 2){
         $("#div2").css({ top:'50vh'});
         $("#div3").css({ top:'-50vh'});
+        $("#div3").css({opacity: "0"});
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       } else if(slide == 3){
@@ -294,12 +295,12 @@ $(document).keydown(function(e){
          setTimeout(function(){ animationfinished = true; }, 1000);
        } else if(slide == 2){
          $("#div2").css({ top:'50vh'});
-         $("#div3").css({ top:'-50vh'});
+         $("#div3").css({ top:'-50vh', opacity: "0"});
          slide--;
          setTimeout(function(){ animationfinished = true; }, 1000);
        } else if(slide == 3){
          $("#div2").css({ top:'150vh'});
-         $("#div3").css({ top:'50vh'});
+         $("#div3").css({ top:'50vh', opacity: "1"});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 4){
