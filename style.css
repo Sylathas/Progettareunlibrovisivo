@@ -391,6 +391,7 @@ a:visited{
 
 #Politecnico{
   width: 20vw;
+  left: 0;
 }
 
 #Americana{
@@ -408,7 +409,6 @@ a:visited{
 .Vertical{
   position: absolute;
   top: 0;
-  left: 0;
   width: 20vw;
   height: 60vh;
 }
@@ -766,4 +766,20 @@ a:visited{
 
 #pgimg6{
   background-image: url(Images/Gabbia23.png);
+}
+
+/*Div 10,11 Style*/
+#VerticalVideo{
+  position: absolute;
+  top: 40vh;
+  left: 40vw;
+  transform: translate(-50%,-50%);
+  width: 20vw;
+  height: 60vh;
+  display: none;
+}
+
+
+#Video{
+  width: 20vw;
 }

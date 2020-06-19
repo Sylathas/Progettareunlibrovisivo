@@ -264,12 +264,17 @@ $(document).keydown(function(e){
       } else if(slide == 24){
         $("#div15").css({ top:'50vh'});
         $("#div14").css({ top:'150vh'});
-        setTimeout(function(){$("#Book").css({opacity:"0"})}, 750);
+        setTimeout(function(){
+          $("#Book").css({opacity:"0"});
+          $("#VerticalVideo").css({display:"block"});
+        }, 750);
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       } else if(slide == 25){
         $("#div15").css({ top:'-50vh'});
         $("#div14").css({ top:'50vh'});
+        $("#Video").currentTime = 0;
+        document.getElementById('Video').play();
         slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       }
@@ -469,9 +474,10 @@ $(document).keydown(function(e){
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        }  else if(slide == 25){
-         $("#Book").css({ opacity:'1'});
          $("#div14").css({ top:'50vh'});
          $("#div15").css({ top:'-50vh'});
+         $("#Book").css({ opacity:'0'});
+         $("#VerticalVideo").css({display:"block"});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 26){
