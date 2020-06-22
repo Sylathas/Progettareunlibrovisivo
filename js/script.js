@@ -142,7 +142,7 @@ $(document).keydown(function(e){
           $("#bookpaper").css({ height: "28.2vw"});
           setTimeout(function(){
             $("#sizetext, #griglia1").css({ opacity: "1"});
-            $("#sizetext").text('Griglia 1: 119x193mm');
+            $("#sizetext").text('Gabbia 1: 119x193mm');
           }, 1000);
         }, 1000);
         slide++;
@@ -151,7 +151,7 @@ $(document).keydown(function(e){
         $("#bookpapercontainer").css({ left:'10vw'});
         $("#chapter5div").css({left:'50vw', width: "20vw", height: "30vw"});
         $("#page5").css({height: "28.2vw"});
-        $("#text5").text('Griglia 5: 139x213mm');
+        $("#text5").text('Gabbia 5: 139x213mm');
         setTimeout(function(){
           $("#chapter5div, #text5, #griglia5").css({opacity: "1"});
         }, 750);
@@ -162,7 +162,7 @@ $(document).keydown(function(e){
         $("#chapter5div").css({left:'60vw'});
         $("#chapter4div").css({left:'30vw', width: "20vw", height: "30vw"});
         $("#page4").css({height: "28.2vw"});
-        $("#text4").text('Griglia 4: 134x208mm');
+        $("#text4").text('Gabbia 4: 134x208mm');
         setTimeout(function(){
           $("#chapter4div, #text4, #griglia4").css({opacity: "1"});
           $("#grigliaimmagine1, #grigliaimmagine4, #grigliaimmagine5").css({opacity: "1"});
@@ -291,6 +291,8 @@ $(document).keydown(function(e){
        } else if(slide == 2){
          $("#div2").css({ top:'50vh'});
          $("#div3").css({ top:'-50vh', opacity: "0"});
+         $("#Edizione53").css({ left:'50%', transform:"translate(-20vw,0)"});
+         $(".Doppiapagina").css({ opacity:'0'});
          slide--;
          setTimeout(function(){ animationfinished = true; }, 1000);
        } else if(slide == 3){
@@ -476,8 +478,8 @@ $(document).keydown(function(e){
        }  else if(slide == 25){
          $("#div14").css({ top:'50vh'});
          $("#div15").css({ top:'-50vh'});
-         $("#Book").css({ opacity:'0'});
-         $("#VerticalVideo").css({display:"block"});
+         $("#Book").css({ opacity:'1'});
+         $("#VerticalVideo").css({display:"none"});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 1000);
        } else if(slide == 26){
