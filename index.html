@@ -7,9 +7,7 @@
     <meta name="description" content="Progettare un libro visivo: Conversazione in Sicilia">
     <meta name="author" content="Niccolò Abate">
     <link rel="stylesheet" href="style.css">
-    <script src="https://threejs.org/build/three.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/OrbitControls.js"></script>
   </head>
   <body>
 
@@ -29,7 +27,7 @@
       </div>
     </div>
 
-    <!--Grid Divs -->
+    <!--Grid Divs
     <div id="Grids1">
       <div class="grid" id="grid1"></div>
       <div class="grid" id="grid2"></div>
@@ -62,7 +60,7 @@
       <div class="grid" id="grid25"></div>
       <div class="grid" id="grid26"></div>
       <div class="grid" id="grid27"></div>
-    </div>
+    </div>-->
 
     <!--Navigation Divs -->
     <div id="div1">
@@ -73,13 +71,16 @@
       <p id="navigate"></p>
     </div>
     <div id="div2">
+      <div class="Doppiapagina prima">
+        <img class="Doppiapaginasize" src="Images/2.jpg">
+        <p>Elio Vittorini, doppia pagina di <span class="nome">Conversazione in Sicilia</span> nell'edizione del 1953.</p>
+      </div>
+      <div class="Doppiapagina seconda">
+        <img class="Doppiapaginasize" src="Images/3.jpg">
+      </div>
       <div id="Edizione53">
         <div id="canvas53"></div>
-        <p>Elio Vittorini, edizione illustrata di <span class="nome">Conversazione in Sicilia</span>, 1953.</p>
-      </div>
-      <div class="right Doppiapagina">
-        <img class="BookManifest" src="Images/2.jpg">
-        <p>Elio Vittorini, doppia pagina di <span class="nome">Conversazione in Sicilia</span> </br>nell'edizione del 1953.</p>
+        <p style="text-align:center">Elio Vittorini, edizione illustrata di <span class="nome">Conversazione in Sicilia</span>, 1953.</p>
       </div>
     </div>
     <div id="div3">
@@ -93,105 +94,82 @@
       </div>
     </div>
     <div id="div4">
-      <p class="Titolo_big">Oniricità</p>
-      <p id="citazione1" class="Citazioni">“La collana perenne delle iterazioni anaforiche, la tenacia delle simmetrie sintattiche,
-         l’ipnosi dichiarata di un lessico cadenzante, […], riflettono, anche nel minimo dettaglio, nel più esiguo
-         campione, l’ideologia itinerale che sostiene il romanzo, e che non si confessa semplicemente nelle ovvie
-         equazioni dell’intreccio, esperienza come conversazione […] è anzi ideologia che si invoca a organizzare il reale”</p>
-         <p id="autorecitazione1" class="autorecitazione"> E. Sanguineti, Introduzione a
-         <span class="nome"> Conversazione in Sicilia </span>, Torino, Einaudi, 1966.</p>
-    </div>
-    <div id="div5">
-      <p class="Titolo_big">Progressione</p>
-      <p id="citazione2" class="Citazioni">“Vi è di più: il giuoco metamerico delle repliche, per un deliberato
-        depauperarsi delle forme irrigidite, risolve circolarmente la progressione-regressione, costringe
-        ogni movimento a ricadere sopra se stesso.”</p>
-        <p id="autorecitazione2" class="autorecitazione"> E. Sanguineti, Introduzione a
-        <span class="nome"> Conversazione in Sicilia </span>, Torino, Einaudi, 1966.</p>
-    </div>
-    <div id="div6">
-      <p class="Titolo_big">Censura</p>
-      <p id="citazione3" class="Citazioni">“Del resto, sempre in pittura, importa piuttosto suggerire un motivo, che specificarlo.
-        Riuscire a suggerire che qualcosa è accaduto o sta per accadere, che un carretto sta per passare,
-        che una draga poco più giù macina l’acqua”</p>
-      <p id="autorecitazione3" class="autorecitazione"> Elio Vittorini, <span class="nome"> Il Bargello </span>,
-         20 novembre 1932.</p>
+      <p id="ParoleChiave">
+        <span class="parola1">Oniricità</span>
+        <span class="parola2">Progressione</span>
+        <span class="parola3">Censura</span>
+      </p>
     </div>
     <div id="div7">
       <div id="a4container">
         <div id="a4"></div>
-        <p>A4: 21x29.7cm</p>
+        <p>17x24cm</p>
       </div>
-      <div id="bookpapercontainer" >
-        <div id="bookpaper">
-          <div id="griglia1"></div>
-          <div id="grigliaimmagine1"></div>
-        </div>
-        <p id="sizetext">Il mio libro: 17x24cm</p>
+      <div id="bookpapercontainer">
+        <div id="bookpaper"></div>
+        <p id="sizetext">17x24cm</p>
         <p class="chaptertext">1</p>
+      </div>
+      <div id ="otherconversazionecontainer">
+        <div id="conversazionesize"></div>
+        <p>13x19.8cm</p>
       </div>
       <div id="a5container">
         <div id="a5"></div>
-        <p>A5: 14,85x21cm</p>
+        <p>12,5x18.5cm</p>
       </div>
       <div id="chapter2div" class="chapterdiv">
         <div class="chapter"></div>
-        <p class="chaptertext">2</p>
+        <p class="chaptertext" id="text2">2</p>
       </div>
       <div id="chapter3div" class="chapterdiv">
         <div class="chapter"></div>
-        <p class="chaptertext">3</p>
+        <p class="chaptertext" id="text3">3</p>
       </div>
-      <div id="chapter4div">
-        <div class="chapter" id="page4">
-          <div id="griglia4"></div>
-          <div id="grigliaimmagine4"></div>
-        </div>
+      <div id="chapter4div" class="chapterdiv">
+        <div class="chapter"></div>
         <p class="chaptertext" id="text4">4</p>
       </div>
-      <div id="chapter5div">
-        <div class="chapter" id="page5">
-          <div id="griglia5"></div>
-          <div id="grigliaimmagine5"></div>
-        </div>
+      <div id="chapter5div" class="chapterdiv">
+        <div class="chapter"></div>
         <p class="chaptertext" id="text5">5</p>
       </div>
       <div id="chapter6div" class="chapterdiv">
         <div class="chapter"></div>
-        <p class="chaptertext">Epilogo</p>
+        <p class="chaptertext" id="text6">Epilogo</p>
       </div>
     </div>
     <div id="div8">
       <div class="HorizontalSmall left">
-        <img class="BookManifest" src="Images/Bianca.jpg">
+        <img class="BookManifestTrue" src="Images/Bianca.jpg">
         <p>Bianca: il testo stampato nella volta di pagina </br> appare in trasparenza.</p>
       </div>
       <div class="HorizontalSmall right">
-        <img class="BookManifest" src="Images/Volta.jpg">
+        <img class="BookManifestTrue" src="Images/Volta.jpg">
         <p>Volta: i dialoghi sono stampati al contrario.</p>
       </div>
     </div>
     <div id="div9">
       <div class="HorizontalVerySmall left" id="Mohawk">
-        <img class="Paper" src="Images/Paper1.png">
+        <img class="Paper" src="Images/Paper1.jpg">
         <p class="papercaption">Mohawk Superfine Eggshell 120g</p>
       </div>
       <div class="HorizontalVerySmall center" id="Takeo">
-        <img class="Paper" src="Images/Paper2.png"><p id="question">?</p></img>
+        <img class="Paper" src="Images/Paper2.jpg"><p id="question">?</p></img>
         <p class="papercaption">Takeo Yamabiko Hosho 78g</p>
       </div>
       <div class="HorizontalVerySmall right" id="Reflex">
-        <img class="Paper" src="Images/Paper3.png">
+        <img class="Paper" src="Images/Paper3.jpg">
         <p class="papercaption">Reflex Sixties 60g</p>
       </div>
     </div>
     <div id="div10">
       <div class="HorizontalSmall left">
-        <img class="BookManifest" src="Images/Bookmanifest1.jpg">
+        <img class="BookManifestTrue" src="Images/Bookmanifest1.jpg">
         <p>Irma Boom, doppie pagine di <span class="name">Book Manifest</span>, 2015.</p>
       </div>
       <div class="HorizontalSmall right">
-        <img class="BookManifest" src="Images/Bookmanifest2.jpg">
+        <img class="BookManifestTrue" src="Images/Bookmanifest2.jpg">
       </div>
     </div>
     <div id="div12">
@@ -199,30 +177,24 @@
         <div class="gabbia" src="Images/Gabbia1.png"></div>
       </div>
       <div class="pgimg left" id="pgimg11">
-        <div class="gabbia" src="Images/Gabbia1.png"></div>
       </div>
       <div class="pgimg center" id="pgimg2">
-        <div class="gabbia" src="Images/Gabbia1.png"></div>
       </div>
       <div class="pgimg right" id="pgimg3">
-        <div class="gabbia" src="Images/Gabbia1.png"></div>
       </div>
     </div>
     <div id="div13">
       <div class="pgimg left" id="pgimg4">
-        <div class="gabbia5" src="Images/Gabbia2.png"></div>
       </div>
       <div class="pgimg center" id="pgimg5">
-        <div class="gabbia5" src="Images/Gabbia2.png"></div>
       </div>
       <div class="pgimg right" id="pgimg6">
-        <div class="gabbia5" src="Images/Gabbia2.png"></div>
       </div>
     </div>
     <div id="div14">
-      <div id="Book">
+      <div id="Book" class="MyBookCanvas">
         <div id="canvasbook"></div>
-        <p>Mia riedizione di <span class="nome">Conversazione in Sicilia</span>.</p>
+        <p style="text-align:center">Mia riedizione di <span class="nome">Conversazione in Sicilia</span>.</p>
       </div>
       <div id="VerticalVideo">
         <video id="Video">
@@ -230,15 +202,17 @@
         </video>
         <p>Web-App AR accessibile su mobile.</p>
       </div>
+      <div class="Copertina">
+        <img class="BookManifest" src="Images/Copertina.jpg" style="height:70vh">
+        <p>Copertina del libro.</p>
+      </div>
     </div>
     <div id="div15">
-      <div class="HorizontalSmall left">
+      <div class="FotoLibro primaLibro">
         <img class="BookManifest" src="Images/Rilegatura.jpg">
-        <p>Rilegatura cucita del libro.</p>
       </div>
-      <div class="HorizontalSmall right">
+      <div class="FotoLibro secondaLibro">
         <img class="BookManifest" src="Images/FrontSide.jpg">
-        <p>Fronte e dorso di copertina.</p>
       </div>
     </div>
 

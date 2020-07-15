@@ -8,6 +8,10 @@
   src: url(Fonts/GaramondPro_it.otf);
 }
 
+*:focus{
+  outline: 0;
+}
+
 body{
   background-color: black;
   overflow: hidden;
@@ -290,8 +294,8 @@ a:visited{
 
 #div12{
   position: absolute;
-  top:50vh;
-  left:150vw;
+  top:150vh;
+  left:50vw;
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
@@ -300,8 +304,8 @@ a:visited{
 
 #div13{
   position: absolute;
-  top:-50vh;
-  left:50vw;
+  top:50vh;
+  left:150vw;
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
@@ -310,8 +314,8 @@ a:visited{
 
 #div14{
   position: absolute;
-  top:150vh;
-  left:50vw;
+  top:50vh;
+  left:150vw;
   transform: translate(-50%,-50%);
   width: 80vw;
   height: 80vh;
@@ -336,7 +340,7 @@ a:visited{
 }
 
 .Titolo_big{
-  font-size: 10vh;
+  font-size: 8vh;
   font-family: GaramondPro;
 }
 
@@ -371,6 +375,7 @@ a:visited{
   transform: translate(-20vw, 0);
   width:40vw;
   height:100%;
+  transition: 1s;
 }
 
 #canvas53, #canvaspages, #canvasbook{
@@ -381,57 +386,77 @@ a:visited{
 .Doppiapagina{
   opacity:0;
   position: absolute;
-  top: 40vh;
-  transform: translate(0,-50%);
-  width: 30vw;
-  height: 40vh;
+  top: 0;
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+.prima{
+  left: 5vw;
+}
+
+.seconda{
+  left: 105vw;
+}
+
+.Doppiapaginasize{
+  height: 70vh;
+  max-width: 70vw;
+  object-fit: cover;
 }
 
 /*Div 3 Style*/
 
 #Politecnico{
-  width: 20vw;
+  height: 70vh;
+  max-width: 50vw;
+  object-fit: cover;
   left: 0;
 }
 
 #Americana{
-  width: 40vw;
+  height: 70vh;
+  max-width: 60vw;
+  object-fit: cover;
 }
 
 .Horizontal{
   position: absolute;
   top: 0;
-  right: 0;
-  width: 40vw;
-  height: 40vh;
+  left: 10vw;
+  width: 50vw;
+  height: 80vh;
+  transition: 1s;
 }
 
 .Vertical{
   position: absolute;
-  top: 0;
-  width: 20vw;
-  height: 60vh;
+  top: -100vh;
+  left:40vw;
+  transform: translate(-50%,0);
+  width: 30vw;
+  height: 80vh;
+  transition: 1s;
 }
 
 /*Div 4,5,6 Style*/
 
-.Citazioni{
-  margin-top: -15vh;
-  font-size: 4vh;
+#ParoleChiave{
+  margin: 0;
+  position: absolute;
+  top:40vh;
+  transform: translate(0,-50%);
+  font-family: GaramondPro;
+  text-align: justify;
+  width: 80vw;
+  font-size: 5vw;
+  text-align-last: justify;
 }
 
-.autorecitazione{
-  margin-top: 3vh;
-  font-size: 3vh;
-  opacity:0;
-  transition: 0.5s;
-  color:  #cccccc;
-}
-
-#citazione1, #citazione2, #citazione3{
+.parola1, .parola2, .parola3{
   opacity: 0;
-  line-height: 0.8;
-  transition: 0.8s;
+  transition: 1s;
 }
 
 /*Div 7 Style*/
@@ -441,8 +466,8 @@ a:visited{
   left:0;
   top:40vh;
   transform: translate(0,-50%);
-  width: 21vw;
-  height: 32vw;
+  width: 17vw;
+  height: 26vw;
   opacity: 0;
   transition: 1s;
 }
@@ -450,8 +475,9 @@ a:visited{
 #a4{
   margin:0;
   width:100%;
-  height:29.7vw;
-  background-color: white;
+  height:24vw;
+  background-image: url(Images/ConvCopertina2.jpg);
+  background-size: cover;
 }
 
 #bookpapercontainer{
@@ -476,13 +502,32 @@ a:visited{
   transition: 0.5s;
 }
 
-#a5container{
+#otherconversazionecontainer{
   position: absolute;
-  left:60vw;
+  left:47.66vw;
   top:40vh;
   transform: translate(0,-50%);
-  width: 14.85vw;
-  height: 23vw;
+  width: 13vw;
+  height: 22vw;
+  transition: 1s;
+  opacity: 0;
+}
+
+#conversazionesize{
+  margin:0;
+  width:100%;
+  height:19.8vw;
+  background-image: url(Images/ConvCopertina2.jpg);
+  background-size: cover;
+}
+
+#a5container{
+  position: absolute;
+  right:0;
+  top:40vh;
+  transform: translate(0,-50%);
+  width: 12.5vw;
+  height: 20.5vw;
   opacity: 0;
   transition: 1s;
 }
@@ -490,8 +535,9 @@ a:visited{
 #a5{
   margin:0;
   width:100%;
-  height:21vw;
-  background-color: white;
+  height:18.5vw;
+  background-image: url(Images/ConvCopertina1.jpg);
+  background-size: cover;
 }
 
 .chapterdiv{
@@ -524,24 +570,10 @@ a:visited{
 }
 
 #chapter4div{
-  position: absolute;
-  top:40vh;
-  transform: translate(0, -50%);
-  width:8vw;
-  height:13vw;
-  opacity:0;
-  transition:1s;
   left:40vw;
 }
 
 #chapter5div{
-  position: absolute;
-  top:40vh;
-  transform: translate(0, -50%);
-  width:8vw;
-  height:13vw;
-  opacity:0;
-  transition:1s;
   left:50vw;
 }
 
@@ -549,90 +581,11 @@ a:visited{
   left:60vw;
 }
 
-#griglia1{
-  position: absolute;
-  border: 1px solid black;
-  opacity: 0;
-  top:2.4vw;
-  left:50%;
-  transform: translate(-50%,0);
-  height:22.7vw;
-  width:14vw;
-  transition: 1s;
-  z-index: 5;
-}
-
-#griglia4{
-  position: absolute;
-  border: 1px solid black;
-  opacity: 0;
-  top:1.5vw;
-  left:50%;
-  transform: translate(-50%,0);
-  height:24.4vw;
-  width:15.8vw;
-  transition: 1s;
-  z-index: 5;
-}
-
-#griglia5{
-  position: absolute;
-  border: 1px solid black;
-  opacity: 0;
-  top:1.2vw;
-  left:50%;
-  transform: translate(-50%,0);
-  height:25vw;
-  width:16.35vw;
-  transition: 1s;
-  z-index: 5;
-}
-
-#grigliaimmagine1{
-  position: absolute;
-  opacity: 0;
-  top:2.4vw;
-  left:50%;
-  transform: translate(-50%,0);
-  height:22.7vw;
-  width:14vw;
-  transition: 1s;
-  background-image: url(./Images/Griglia1.png);
-  background-size:cover;
-}
-
-#grigliaimmagine4{
-  position: absolute;
-  opacity: 0;
-  top:1.5vw;
-  left:50%;
-  transform: translate(-50%,0);
-  height:24.4vw;
-  width:15.8vw;
-  transition: 1s;
-  background-image: url(./Images/Griglia2.png);
-  background-size:cover;
-}
-
-#grigliaimmagine5{
-  position: absolute;
-  opacity: 0;
-  top:1.2vw;
-  left:50%;
-  transform: translate(-50%,0);
-  height:25vw;
-  width:16.35vw;
-  transition: 1s;
-  background-image: url(./Images/Griglia3.png);
-  background-size:cover;
-}
-
 /*Div 9 Style*/
 
 .HorizontalVerySmall{
   position: absolute;
-  top: 40vh;
-  transform: translate(0,-50%);
+  top: 25vh;
   width: 20vw;
   height: 30vh;
   transition: 1s;
@@ -644,6 +597,7 @@ a:visited{
 
 .Paper{
   width: 100%;
+  object-fit: cover;
   opacity: 0.5;
   filter: blur(10px);
 }
@@ -670,8 +624,8 @@ a:visited{
 .HorizontalSmall{
   position: absolute;
   top: 0;
-  width: 30vw;
-  height: 40vh;
+  width: 38vw;
+  height: 70vh;
 }
 
 .right{
@@ -683,7 +637,13 @@ a:visited{
 }
 
 .BookManifest{
-  width: 30vw;
+  width: 60vw;
+  max-height: 80vh;
+  object-fit: cover;
+}
+
+.BookManifestTrue{
+  width: 38vw;
 }
 
 /*Div 10,11 Style*/
@@ -768,18 +728,50 @@ a:visited{
   background-image: url(Images/Gabbia23.png);
 }
 
-/*Div 10,11 Style*/
+/*Div 13*/
+
+.Copertina{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
+  width: 60vw;
+  height: 80vh;
+  transition: 1s;
+}
+
 #VerticalVideo{
   position: absolute;
+  opacity: 1;
   top: 40vh;
-  left: 40vw;
+  left: 140vw;
   transform: translate(-50%,-50%);
-  width: 20vw;
-  height: 60vh;
-  display: none;
+  width: 30vw;
+  height: 80vh;
+  transition: 1s;
 }
 
 
 #Video{
-  width: 20vw;
+  height: 70vh;
+}
+
+/*Div 14*/
+
+.FotoLibro{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
+  width: 60vw;
+  height: 80vh;
+  transition: 1s;
+}
+
+.primaLibro{
+  left: 50%;
+}
+
+.secondaLibro{
+  left: 140vw;
 }

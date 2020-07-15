@@ -2,6 +2,8 @@ var camera, scene, renderer, mesh, material, cameraControls, mygltf;
 init();
 animate();
 
+import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/build/three.module.js';
+import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/controls/OrbitControls.js';
 import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/GLTFLoader.js';
 
 //Check if mouse is down (to stop model from rotating when orbiting)
@@ -32,7 +34,7 @@ function init() {
     camera = new THREE.PerspectiveCamera(1.5, w / h, 1, 1000);
     camera.position.set(5,5,10);
     //create controls
-    cameraControls = new THREE.OrbitControls( camera, renderer.domElement );
+    cameraControls = new OrbitControls( camera, renderer.domElement );
     cameraControls.enableKeys = false;
     cameraControls.enablePan = false;
 
@@ -42,14 +44,14 @@ function init() {
     {
       const skyColor = 0xFFFFFF;  // light blue
       const groundColor = 0xFFFFFF;  // brownish orange
-      const intensity = 0.8;
+      const intensity = 1;
       const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
       scene.add(light);
     }
 
     {
       const color = 0xFFFFFF;
-      const intensity = 1;
+      const intensity = 0.8;
       const light = new THREE.DirectionalLight(color, intensity);
       light.position.set(5, 10, 2);
       scene.add(light);
@@ -68,7 +70,7 @@ function init() {
 function animate() {
     resizeCanvasToDisplaySize();
     if(mouseDown == 0){
-      if (mygltf) mygltf.rotation.y += 0.01;
+      if (mygltf) mygltf.rotation.y += 0.005;
     }
 
     cameraControls.update();
