@@ -13,7 +13,7 @@
 
     <!--Preload Divs -->
     <div id="start">
-      <div class="percentage" id="percent"></div>
+      <div class="percentage">La presentazione si sta caricando...</div>
       <div id="tutorial">
         <div id="leftTutorial">
           <img id="leftarrowkey" src="Images/Tutorial.png">
@@ -70,6 +70,12 @@
       <p id="arrow">&rarr;</p>
       <p id="navigate"></p>
     </div>
+    <div id="div1e5">
+      <div class="Verticalseconda">
+        <img id="Secondaslide" src="Images/secondaslide.jpg">
+        <p>Elio Vittorini, <span class="nome"> Conversazione in Sicilia </span>, 1970.</p>
+      </div>
+    </div>
     <div id="div2">
       <div class="Doppiapagina prima">
         <img class="Doppiapaginasize" src="Images/2.jpg">
@@ -107,6 +113,7 @@
       </div>
       <div id="bookpapercontainer">
         <div id="bookpaper"></div>
+        <div id="bookpaperimage"></div>
         <p id="sizetext">17x24cm</p>
         <p class="chaptertext">1</p>
       </div>
@@ -119,23 +126,23 @@
         <p>12,5x18.5cm</p>
       </div>
       <div id="chapter2div" class="chapterdiv">
-        <div class="chapter"></div>
+        <div class="chapter" id="chapter2image"></div>
         <p class="chaptertext" id="text2">2</p>
       </div>
       <div id="chapter3div" class="chapterdiv">
-        <div class="chapter"></div>
+        <div class="chapter" id="chapter3image"></div>
         <p class="chaptertext" id="text3">3</p>
       </div>
       <div id="chapter4div" class="chapterdiv">
-        <div class="chapter"></div>
+        <div class="chapter" id="chapter4image"></div>
         <p class="chaptertext" id="text4">4</p>
       </div>
       <div id="chapter5div" class="chapterdiv">
-        <div class="chapter"></div>
+        <div class="chapter" id="chapter5image"></div>
         <p class="chaptertext" id="text5">5</p>
       </div>
       <div id="chapter6div" class="chapterdiv">
-        <div class="chapter"></div>
+        <div class="chapter" id="chapter6image"></div>
         <p class="chaptertext" id="text6">Epilogo</p>
       </div>
     </div>
@@ -176,26 +183,26 @@
       <div class="pgimg" id="pgimg1">
         <div class="gabbia" src="Images/Gabbia1.png"></div>
       </div>
-      <div class="pgimg left" id="pgimg11">
+      <div class="HorizontalSmallimg left" id="Immagini1">
+        <img class="BookManifestTrue" src="Images/Part1.jpg">
+        <p>Parte 1</p>
       </div>
-      <div class="pgimg center" id="pgimg2">
-      </div>
-      <div class="pgimg right" id="pgimg3">
+      <div class="HorizontalSmallimg right" id="Immagini2">
+        <img class="BookManifestTrue" src="Images/Part2.jpg">
+        <p>Parte 2</p>
       </div>
     </div>
     <div id="div13">
-      <div class="pgimg left" id="pgimg4">
+      <div class="HorizontalSmallimg left" id="Immagini3">
+        <img class="BookManifestTrue" src="Images/Part3.jpg">
+        <p>Parte 3</p>
       </div>
-      <div class="pgimg center" id="pgimg5">
-      </div>
-      <div class="pgimg right" id="pgimg6">
+      <div class="HorizontalSmallimg right" id="Immagini4">
+        <img class="BookManifestTrue" src="Images/Part5.jpg">
+        <p>Parte 5</p>
       </div>
     </div>
     <div id="div14">
-      <div id="Book" class="MyBookCanvas">
-        <div id="canvasbook"></div>
-        <p style="text-align:center">Mia riedizione di <span class="nome">Conversazione in Sicilia</span>.</p>
-      </div>
       <div id="VerticalVideo">
         <video id="Video">
           <source src="Video/AR.mp4" type="video/mp4">
@@ -214,11 +221,24 @@
       <div class="FotoLibro secondaLibro">
         <img class="BookManifest" src="Images/FrontSide.jpg">
       </div>
+      <div class="FotoLibro terzaLibro">
+        <img class="BookManifest" src="Images/FrontSide2.jpg">
+      </div>
+    </div>
+    <div id="div16">
+      <img id="PolitecnicoMilano" src="Images/Logo_Politecnico_Milano.png">
+      <p class="Autore">
+        Laurea Triennale in Design della Comunicazione</br>
+        A.A. 2019/2020</br>
+
+        Tesi di Niccolò Abate</br>
+        Matricola 886442</br>
+        Relatore - Prof. Mario Piazza
+      </p>
     </div>
 
     <script type="text/javascript" src="js/detectmobilebrowser.js"></script>
     <script src="js/script.js"></script>
     <script type="module" src="js/scene1.js"></script>
-    <script type="module" src="js/scene3.js"></script>
   </body>
 </html>

@@ -42,6 +42,7 @@ a:visited{
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
+  transition: 0.5s;
 }
 
 #tutorial{
@@ -191,6 +192,16 @@ a:visited{
   opacity: 0;
 }
 
+#div1e5{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
 #div2{
   position: absolute;
   top:50vh;
@@ -332,6 +343,16 @@ a:visited{
   transition: 1s;
 }
 
+#div16{
+  position: absolute;
+  top:50vh;
+  left:150vw;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  transition: 1s;
+}
+
 /*Div 1 Style*/
 
 .Titolo{
@@ -364,6 +385,25 @@ a:visited{
   right: 0;
   top: 40vh;
   transform: translate(0,50%);
+}
+
+/*Div1e5 Style*/
+
+#Secondaslide{
+  height: 70vh;
+  max-width: 50vw;
+  object-fit: cover;
+  left: 0;
+}
+
+.Verticalseconda{
+  position: absolute;
+  top: 0;
+  left:40vw;
+  transform: translate(-50%,0);
+  width: 30vw;
+  height: 80vh;
+  transition: 1s;
 }
 
 /*Div 2,11,14 Style*/
@@ -496,6 +536,20 @@ a:visited{
   height: 24vw;
   background-color: white;
   transition: 1s;
+  background-size: cover;
+}
+
+#bookpaperimage{
+  position: absolute;
+  top:0;
+  opacity: 0;
+  margin:0;
+  width:100%;
+  height: 24vw;
+  background-color: white;
+  transition: 1s;
+  background-size: cover;
+  background-image: url(Images/testi/1.jpg);
 }
 
 #sizetext{
@@ -517,7 +571,7 @@ a:visited{
   margin:0;
   width:100%;
   height:19.8vw;
-  background-image: url(Images/ConvCopertina2.jpg);
+  background-image: url(Images/ConvCopertina3.jpg);
   background-size: cover;
 }
 
@@ -579,6 +633,10 @@ a:visited{
 
 #chapter6div{
   left:60vw;
+}
+
+#chapter2image, #chapter3image, #chapter4image, #chapter5image, #chapter6image{
+  background-size: cover;
 }
 
 /*Div 9 Style*/
@@ -656,7 +714,7 @@ a:visited{
   height: 28.2vw;
   background-color: white;
   transition: 1s;
-  opacity: 0;
+  opacity: 1;
   background-size: cover;
 }
 
@@ -673,62 +731,34 @@ a:visited{
   background-size: cover;
 }
 
-.gabbia5{
-  position: absolute;
-  opacity: 1;
-  top:1.2vw;
-  left:50%;
-  transform: translate(-50%,0);
-  width:16.8vw;
-  height:25vw;
-  transition: 1s;
-  z-index: 10;
-  background-size: cover;
-}
-
 #pgimg1{
   opacity: 1;
   left: 30vw;
 }
 
-#pgimg1 > .gabbia, #pgimg11 > .gabbia, #pgimg2 > .gabbia, #pgimg3 > .gabbia{
+#pgimg1 > .gabbia{
   background-image: url(Images/Gabbia1.png);
 }
 
-#pgimg4 > .gabbia5, #pgimg5 > .gabbia5, #pgimg6 > .gabbia5{
-  background-image: url(Images/Gabbia2.png);
-}
-
 #pgimg1{
   opacity: 1;
   left: 30vw;
 }
 
-#pgimg11{
-  background-image: url(Images/Gabbia11.png);
-}
-
-#pgimg2{
-  background-image: url(Images/Gabbia12.png);
-}
-
-#pgimg3{
-  background-image: url(Images/Gabbia13.png);
-}
-
-#pgimg4{
-  background-image: url(Images/Gabbia21.png);
-}
-
-#pgimg5{
-  background-image: url(Images/Gabbia22.png);
-}
-
-#pgimg6{
-  background-image: url(Images/Gabbia23.png);
-}
-
 /*Div 13*/
+
+.HorizontalSmallimg{
+  position: absolute;
+  top: 40vh;
+  transform: translate(0,-50%);
+  width: 38vw;
+  height: 70vh;
+}
+
+#Immagini1, #Immagini2, #Immagini3, #Immagini4{
+  opacity: 0;
+  transition: 1s;
+}
 
 .Copertina{
   position: absolute;
@@ -742,9 +772,9 @@ a:visited{
 
 #VerticalVideo{
   position: absolute;
-  opacity: 1;
+  opacity: 0;
   top: 40vh;
-  left: 140vw;
+  left: 40vw;
   transform: translate(-50%,-50%);
   width: 30vw;
   height: 80vh;
@@ -774,4 +804,17 @@ a:visited{
 
 .secondaLibro{
   left: 140vw;
+}
+
+.terzaLibro{
+  left: 140vw;
+}
+
+/*Div 16*/
+
+#PolitecnicoMilano{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 30vh;
 }
