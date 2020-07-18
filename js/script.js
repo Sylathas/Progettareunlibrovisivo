@@ -262,6 +262,7 @@ $(document).keydown(function(e){
       } else if(slide == 29){
         $("#div15").css({ left:'-50vw'});
         $("#div16").css({ left:'50vw'});
+        slide++;
         setTimeout(function(){ animationfinished = true;}, 1000);
       }
     }
