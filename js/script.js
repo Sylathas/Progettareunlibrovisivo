@@ -495,7 +495,7 @@ $(document).keydown(function(e){
          setTimeout(function(){ animationfinished = true;}, 500);
        } else if(slide == 30){
          $("#div15").css({ left:'50vw'});
-         $("#div16").css({ top:'150vw'});
+         $("#div16").css({ left:'150vw'});
          slide--;
          setTimeout(function(){ animationfinished = true;}, 500);
        }
